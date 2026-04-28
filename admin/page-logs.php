@@ -116,7 +116,6 @@ sort( $all_keys );
                     <th>Time</th>
                     <th>Page URL</th>
                     <th>Referrer</th>
-                    <th>IP</th>
                     <?php foreach ( $sorted_keys as $k ) : ?>
                         <th class="upt-param-col <?php echo in_array( $k, $priority ) ? 'upt-key-priority' : ''; ?>">
                             <?php echo esc_html( $k ); ?>
@@ -140,7 +139,6 @@ sort( $all_keys );
                     <td class="upt-ref" title="<?php echo esc_attr( $row->referrer ); ?>">
                         <?php echo esc_html( $row->referrer ? substr( $row->referrer, 0, 40 ) . '…' : '—' ); ?>
                     </td>
-                    <td class="upt-ip"><?php echo esc_html( $row->ip_address ?: '—' ); ?></td>
 
                     <?php foreach ( $sorted_keys as $k ) : ?>
                         <td class="upt-param-val <?php echo isset( $params[$k] ) ? 'upt-present' : 'upt-missing'; ?>">

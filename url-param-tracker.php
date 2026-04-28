@@ -9,7 +9,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'UPT_TABLE', 'url_params_log' );
-define( 'UPT_VERSION', '1.0.1' );
+define( 'UPT_VERSION', '1.0.3' );
 
 register_activation_hook( __FILE__, 'upt_create_table' );
 
