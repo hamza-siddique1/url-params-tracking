@@ -23,5 +23,3 @@ The **Param Coverage** page shows you exactly which params are present/missing:
 - `gclid` coverage = 0% but traffic is coming from Google → Google Auto-Tagging is OFF in Google Ads
 - `utm_source` coverage = 100%, `gclid` = 0% → manual UTM tagging only, no GCLID
 - CRM shows higher `gclid` count than this table → CRM is reading from GA4 or cookies, not raw URL
-
-```
