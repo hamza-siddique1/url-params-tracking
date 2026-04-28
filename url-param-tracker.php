@@ -9,7 +9,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'UPT_TABLE', 'url_params_log' );
-define( 'UPT_VERSION', '1.0.0' );
+define( 'UPT_VERSION', '1.0.1' );
 
 register_activation_hook( __FILE__, 'upt_create_table' );
 
@@ -72,13 +72,6 @@ function upt_capture_params() {
 }
 
 function upt_get_ip() {
-    $keys = [ 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'REMOTE_ADDR' ];
-    foreach ( $keys as $k ) {
-        if ( ! empty( $_SERVER[ $k ] ) ) {
-            $ip = trim( explode( ',', $_SERVER[ $k ] )[0] );
-            if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) return $ip;
-        }
-    }
     return '';
 }
 
